@@ -6,15 +6,24 @@
     <title>formtag.html</title>
 </head>
 <body>
-    <form action="./01-result.html" method="get">
+    
+    <form action="./01-result.html" method="get" autocomplete="off">
         <label for="name">이름</label>
-        <input type="text" id="name" name="my-name">
+        <input type="text" id="name" name="my_name">
         <br><br>
-        <label for="age">나이</label>
-        <input type="number" id="age" name="my-age">
+        <label>
+            나이 <input type="number" name="my_age" max="150">
+        </label>
         <br><br>
+        <label><input type="checkbox" value="결혼함" name="married"> 결혼여부</label>
+        <label><input type="checkbox" value="축구" name="hobby">축구</label>
+        <label><input type="checkbox" value="농구" name="hobby">농구</label>
+        <label><input type="checkbox" value="배구" name="hobby">배구</label>
         <input type="submit" value="제출">
+        <input type="button" value="버튼">
         <input type="reset" value="초기화">
+        <button type="button">버튼2</button>
     </form>
+    
 </body>
 </html>
