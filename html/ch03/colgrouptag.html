@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport", content="width=device-width, initial-scale=1.0">
+    <style>
+        table { border-collapse: collapse; }
+        td, th { border: 1px solid #abc; padding: 10px; text-align: center; }           
+        .weekend { background-color: #eee; }
+        .color_red { color: red; }
+    </style>
+    <title>colgrouptag.html</title>
+</head>
+<body>
+    <!-- p.111 -->
+    <pre>emmet기능: table>tbody>(tr>td{_}*7)*4</pre>
+    <table>        
+        <colgroup>
+            <col class="weekend">
+            <col span="5">
+            <col class="weekend">
+        </colgroup>
+        <thead>
+            <tr>                
+                <th scope="col">일</th>                
+                <th scope="col">월</th>                
+                <th scope="col">화</th>                
+                <th scope="col">수</th>                
+                <th scope="col">목</th>                
+                <th scope="col">금</th>                
+                <th scope="col">토</th>                
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>_</td>
+                <td>_</td>
+                <td>_</td>
+                <td>_</td>
+                <td>_</td>
+                <td>_</td>
+                <td>_</td>
+            </tr>
+            <tr class="color_red weekend">
+                <td>_</td>
+                <td>_</td>
+                <td>_</td>
+                <td>_</td>
+                <td>_</td>
+                <td>_</td>
+                <td>_</td>
+            </tr>
+            <tr>
+                <td>_</td>
+                <td>_</td>
+                <td>_</td>
+                <td>_</td>
+                <td>_</td>
+                <td>_</td>
+                <td>_</td>
+            </tr>
+            <tr class="color_red">
+                <td>_</td>
+                <td>_</td>
+                <td>_</td>
+                <td>_</td>
+                <td>_</td>
+                <td>_</td>
+                <td>_</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

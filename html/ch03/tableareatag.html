@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        table { border-collapse: collapse; }
+        td, th { border: 1px solid #abc; padding: 10px; text-align: center; }
+        caption { caption-side: bottom; margin-top: 12px; }
+        thead, tfoot { background-color: #c2c2c2; }        
+    </style>
+    <title>tableareatag.html</title>
+</head>
+<body>
+    <table>
+        <caption>웹 개발 공부 기록</caption>
+        <thead>
+            <tr>
+                <th scope="col">과목</th>
+                <th scope="col">월</th>
+                <th scope="col">화</th>
+                <th scope="col">수</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">HTML</th>
+                <td>60분</td>
+                <td>60분</td>
+                <td>0분</td>
+            </tr>
+            <tr>
+                <th scope="row">CSS</th>
+                <td>0분</td>
+                <td>30분</td>
+                <td>60분</td>
+            </tr>
+            <tr>
+                <th scope="row">JS</th>
+                <td>0분</td>
+                <td>0분</td>
+                <td>60분</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th scope="row">총 시간</th>
+                <td>60분</td>
+                <td>90분</td>
+                <td>120분</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
