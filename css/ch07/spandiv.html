@@ -4,6 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>spandiv.html</title>
+    <style>
+        /* inline 태그, 필요한 width 공간만 차지, 
+            가로, 세로 크기 지정, margin 무시
+        */
+        span { 
+            display: inline;
+            background-color: rgb(99, 99, 239);
+            margin-bottom: 20px;
+        }
+
+        /* block 태그, 부모의 width 크기를 차지 */
+        div { 
+            display: block;
+            background-color: coral; 
+            margin-bottom: 10px;
+        }
+
+        span, div { width: 140px; height: 50px; }
+    </style>
 </head>
 <body>
     <span>span요소</span>
