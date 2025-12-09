@@ -1,0 +1,18 @@
+/* selector.css */
+* { font-weight: bold; color: darkorange; }
+
+.blue { color: lightblue; }
+/* p태그 이면서 blue 클래스를 가지고 있는 엘리먼트 선택 */
+p.blue { color: slateblue; }
+p { color: olivedrab; }
+* { color: plum; }
+
+p.blue.dark { color: rgb(40, 219, 138); }
+.blue.dark { color: mediumblue; }
+
+/* ID선택자는 우선순위가 굉장히 높다. !important에 가깝다. */
+#red { color: tomato; }
+
+/* 그룹선택자 */
+span, .dark, #red { text-decoration: underline; }
+span { text-decoration-color: black; }
