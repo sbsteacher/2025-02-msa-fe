@@ -5,7 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         .outer li { color: olivedrab; }
-    </style>
+        .outer > li { color: dodgerblue; }
+        .outer > li li { text-decoration: underline; }
+        /* General Sibling 선택자 (일반) */
+        .starter ~ li { font-style: italic; }
+        /* Adjacent Sibling 선택자 (인접) */
+        .starter + li { font-weight: bold; }
+        /* 가상 선택자 (가상클래스 조합) */
+        ol li:first-child,
+        ol li:last-child { color: yellowgreen; }
+        ol li:nth-child(3) { color:deeppink; font-weight: bold; }
+        .outer > li:not(:last-child) { text-decoration: line-through; }
+        ul:not(.outer) li { font-weight: bold; }
+        li:hover { color: blue; }
+        </style>
     <title>pseudoclass.html</title>
 </head>
 <body>
