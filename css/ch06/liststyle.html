@@ -4,7 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>liststyle.html</title>
-    
+    <style>
+        ul { list-style: circle; }
+        /* Win + . 이모지창 뜬다. */
+        ul > li:first-child { list-style: "🤑" }
+        ol { list-style: upper-alpha; }
+    </style>
 </head>
 <body>
     <pre>ul>(li{ul 아이템 $})*3</pre>
