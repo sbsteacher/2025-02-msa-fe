@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>textshadow2.html</title>
+    <style>body {
+    background-color: #000; /* 어두운 배경이 효과를 극대화합니다 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.fire-text {
+    color: #f5f5f5; /* 기본 텍스트 색상 */
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 80px;
+    text-align: center;
+    /* 여러 겹의 text-shadow를 사용하여 불꽃의 깊이를 표현합니다 */
+    text-shadow:
+        0 0 7px #fff,   /* 가장 안쪽의 강렬한 흰색 열기 */
+        0 0 10px #ff3,  /* 노란색 불꽃 코어 */
+        0 -5px 15px #f90, /* 주황색 불꽃 몸통 */
+        0 -10px 20px #c33; /* 가장자리의 붉은색 */
+    animation: flicker 1s ease-in-out infinite alternate; /* 흔들림 애니메이션 적용 */
+}
+
+/* 불꽃 흔들림 효과를 위한 키프레임 정의 */
+@keyframes flicker {
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+        text-shadow:
+            0 0 7px #fff,
+            0 0 10px #ff3,
+            0 -5px 15px #f90,
+            0 -10px 20px #c33;
+    }
+    20%, 24%, 55% {
+        text-shadow:
+            0 0 7px #fff,
+            0 0 12px #ff3,
+            0 -2px 16px #f90,
+            0 -10px 22px #c33;
+    }
+}</style>
+</head>
+<body>
+    <div class="fire-text">FIRE</div>
+</body>
+</html>
