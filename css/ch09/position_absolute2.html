@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position_absolute2.html</title>
+    <style>
+        div { width: 100px; height: 100px; 
+            background-color: bisque; 
+            margin-bottom: 20px;
+        }
+        /* 
+            absolute는 부모 기준에서 위치 조정이 되기 때문에 부모 먼저 찾는다. 
+            static이 아닌 부모를 찾는다. 즉, static은 부모로 인정 안 한다.
+            부모를 못 찾으면 body가 부모가 된다.
+
+            지금처럼 자식이 부모를 벗어나서 표시되는 건 지양.
+            부모가 자식을 품을 수 있도록 처리
+
+            absolute는 자리 차지하지 않는다. 붕 뜨게 된다.
+        */
+        .div-b { position: absolute; left: 30px; top: 30px;  } 
+    </style>
+</head>
+<body>
+    <h1>position_absolute2.html</h1>
+    <div class="div-a">A</div>
+    <div style="position: relative; background-color: aqua;">
+        <div class="div-b">B</div>
+    </div>
+    <div class="div-c">C</div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position_absolute.html</title>
+    <style>
+        div { width: 100px; height: 100px; 
+            background-color: bisque; 
+            margin-bottom: 20px;
+        }
+        /* 
+            absolute는 부모 기준에서 위치 조정이 되기 때문에 부모 먼저 찾는다. 
+            static이 아닌 부모를 찾는다. 즉, static은 부모로 인정 안 한다.
+            부모를 못 찾으면 body가 부모가 된다.
+        */
+        .div-b { position: absolute; left: 30px; top: 30px;  } 
+    </style>
+</head>
+<body>
+    <h1>position_absolute.html</h1>
+    <div class="div-a">A</div>
+    <div class="div-b">B</div>
+    <div class="div-c">C</div>
+</body>
+</html>
