@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>boxsizing.html</title>
+    <style>
+        .container div { 
+            width: 200px; height: 200px; 
+            border: 2px solid #ccc; 
+            padding: 5px;
+            background-color: bisque;
+        }
+        .container > div:not(:last-child) { margin-bottom: 10px;}
+        .cls1 { box-sizing: content-box; }
+        .cls2 { box-sizing: border-box; border-radius: 0 20px 0 10px; }
+        .cls3 { border-radius: 50%; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="cls1">cls1</div>
+        <div class="cls2">cls2</div>
+        <div class="cls3">cls3</div>        
+        <div class="cls4">cls4</div>        
+        <div class="cls5">cls5</div>        
+    </div>
+</body>
+</html>

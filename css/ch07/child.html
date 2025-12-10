@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span, p { border: 1px solid #ccc; }
+        p { display: inline; padding: 0 5px; }
+
+        .parent > span:first-child {
+            background: lightgreen;
+        }
+
+        .parent2 > :first-child {
+            background: lightgreen;
+        }
+
+    </style>
+</head>
+    <body>
+        <div class="parent">
+        <span class="box box1">span</span>
+        <p class="box box1">p</p>
+        <span class="box box1">span</span>
+        <p class="box box1">p</p>
+        <span class="box box1">span</span>
+        <p class="box box1">p</p>
+        <p class="box box1">p</p>
+        <p class="box box1">p</p>
+    </div>
+    <hr>
+    <div class="parent2">
+        <span class="box box1">span</span>
+        <p class="box box1">p</p>
+        <span class="box box1">span</span>
+        <p class="box box1">p</p>
+        <span class="box box1">span</span>
+        <p class="box box1">p</p>
+        <p class="box box1">p</p>
+        <p class="box box1">p</p>
+    </div>
+
+</body>
+</html>
