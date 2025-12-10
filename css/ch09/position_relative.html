@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position_relative.html</title>
+    <style>
+        div { width: 100px; height: 100px; 
+            background-color: bisque; 
+            margin-bottom: 20px;
+        }
+        /* static은 위치 조정 속성 (left, right, top, bottom) 무시 */
+        .div-b { position: relative; left: 10px; top: 10px; } 
+    </style>
+</head>
+<body>
+    <div class="div-a">A</div>
+    <div class="div-b">B</div>
+    <div class="div-c">C</div>
+</body>
+</html>
