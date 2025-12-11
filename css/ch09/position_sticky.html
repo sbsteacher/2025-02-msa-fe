@@ -6,19 +6,24 @@
     <title>position_sticky.html</title>
     <style>
         * { margin: 0; padding: 0; }
-        .container { position: relative; margin-top: 57px; height: 300vh; }
+        .container { position: relative; margin-top: 57px; height: 700vh;
+                    width: 800px;
+        }
         header { 
             position: fixed; top: 0; left: 0; right: 0; 
             background-color: gray; height: 80px; color: #fff;
             display: flex; justify-content: center; align-items: center;
         }
         header h1 { font-size: 24px; }
-        .one > img { width: 100vw; display: block; }
-        .two { position: sticky; top: 0; padding: 70px 0 0 12px; 
-            text-align: center;                
+        .one > img { width: 100%; display: block; }
+        .two { 
+            position: sticky; top: 0; padding: 70px 0 0 12px; 
+            text-align: center;
+            height: 1500px;
+            background-color: aqua;
         }
         footer { 
-            font-size: 24px; height: 1500px; 
+            position: relative; font-size: 24px; height: 1500px; 
             background-color: #fbd1d1;
         }
     </style>
@@ -39,10 +44,9 @@
             <h2>position sticky</h2>
             <div>scrolling</div>
         </div>
-
-        <footer>
-            <p>footer area</p>
-        </footer>
     </div>
+    <footer>
+        <p>footer area</p>
+    </footer>
 </body>
 </html>
