@@ -7,19 +7,12 @@
     <style>
         span, p { border: 1px solid #ccc; }
         p { display: inline; padding: 0 5px; }
-
-        .parent > span:first-child {
-            background: lightgreen;
-        }
-
-        .parent2 > :first-child {
-            background: lightgreen;
-        }
-
+        .parent > span:first-child { background: lightgreen; }
+        .parent2 > p:first-of-type { background: lightgreen; }
     </style>
 </head>
-    <body>
-        <div class="parent">
+<body>
+    <div class="parent">
         <span class="box box1">span</span>
         <p class="box box1">p</p>
         <span class="box box1">span</span>

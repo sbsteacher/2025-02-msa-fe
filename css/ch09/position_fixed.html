@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position_fixed.html</title>
+    <style>
+        div { width: 100px; height: 100px; 
+            background-color: bisque; 
+            margin-bottom: 20px;
+        }
+        body { height: 3000px; }
+        /* fixed는 뷰포트에 고정된다. */
+        .div-b { position: fixed; left: 0; top: 0; width: 100vw; } 
+    </style>
+</head>
+<body>
+    <h1>position_fixed.html</h1>
+    <div class="div-a">A</div>
+    <div class="div-b">B</div>
+    <div class="div-c">C</div>
+</body>
+</html>
