@@ -5,7 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>position_sticky.html</title>
     <style>
-
+        * { margin: 0; padding: 0; }
+        .container { position: relative; margin-top: 57px; height: 300vh; }
+        header { 
+            position: fixed; top: 0; left: 0; right: 0; 
+            background-color: gray; height: 80px; color: #fff;
+            display: flex; justify-content: center; align-items: center;
+        }
+        header h1 { font-size: 24px; }
+        .one > img { width: 100vw; display: block; }
+        .two { position: sticky; top: 0; padding: 70px 0 0 12px; 
+            text-align: center;                
+        }
+        footer { 
+            font-size: 24px; height: 1500px; 
+            background-color: #fbd1d1;
+        }
     </style>
 </head>
 <body>
@@ -19,7 +34,7 @@
             <img src="https://picsum.photos/640/481" alt="dummy 이미지">
             <img src="https://picsum.photos/640/482" alt="dummy 이미지">
         </div>
-        
+
         <div class="two">
             <h2>position sticky</h2>
             <div>scrolling</div>
