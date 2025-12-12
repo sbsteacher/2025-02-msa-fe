@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Position Sticky 예제</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+
+        h1 {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            margin-bottom: 30px;
+        }
+
+        .content-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            /* 각 섹션이 sticky header의 부모 컨테이너가 됩니다. 
+            sticky 요소는 부모 요소를 벗어나지 않습니다. */
+            min-height: 800px; /* 스크롤 고정을 위한 충분한 높이 */
+            margin-bottom: 40px;
+            padding: 1px 20px 20px;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .sticky-header {
+            /* 1. position: sticky 설정 */
+            position: sticky; 
+            
+            /* 2. 고정될 위치 설정 (뷰포트 상단에서 0px) */
+            top: 0; 
+            
+            /* 고정 시 다른 요소 위에 보이도록 z-index 설정 (선택 사항) */
+            z-index: 10; 
+            
+            /* 스타일링 */
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            margin: -1px 0 20px -20px; /* section padding에 맞추기 위한 조정 */
+            width: calc(100% + 40px); /* section padding에 맞추기 위한 조정 */
+            box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+        }
+
+        /* 긴 내용을 시각적으로 표현하기 위한 더미 클래스 */
+        .long-text {
+            height: 600px; 
+            background-color: #e9ecef;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+            line-height: 560px;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #495057;
+            content: "스크롤을 내리면 이 섹션 제목이 상단에 고정됩니다.";
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>스크롤하여 Sticky Header 작동 확인하기</h1>
+
+    <div class="content-container">
+        <section>
+            <h2 class="sticky-header">📌 섹션 1: Sticky Header</h2>
+            <p>
+                이 섹션의 내용은 매우 길어 스크롤이 필요합니다. 
+                스크롤을 내리다 보면 위의 제목("섹션 1: Sticky Header")이 화면 상단에 고정되는 것을 볼 수 있습니다. 
+                이 섹션이 끝날 때까지 고정되어 있다가, 다음 섹션이 시작되면 함께 스크롤되어 올라갑니다.
+            </p>
+            <p class="long-text">...</p>
+        </section>
+
+        <section>
+            <h2 class="sticky-header">📌 섹션 2: 다음 Sticky Header</h2>
+            <p>
+                이제 두 번째 섹션입니다. 첫 번째 sticky header는 이 섹션이 시작되면서 스크롤을 따라 올라갔고, 
+                이 두 번째 sticky header가 화면 상단에 고정됩니다.
+            </p>
+            <p class="long-text">...</p>
+        </section>
+
+        <section>
+            <h2 class="sticky-header">📌 섹션 3: 다음 Sticky Header</h2>
+            <p>
+                이제 세 번째 섹션입니다. 첫 번째 sticky header는 이 섹션이 시작되면서 스크롤을 따라 올라갔고, 
+                이 두 번째 sticky header가 화면 상단에 고정됩니다.
+            </p>
+            <p class="long-text">...</p>
+        </section>
+    </div>
+
+</body>
+</html>
