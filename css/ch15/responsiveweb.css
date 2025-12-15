@@ -7,3 +7,33 @@ body { margin: 0; }
     color: royalblue;
     font-weight: bold;
 }
+header { position: relative; min-width: 80px; }
+nav ul { padding-left: 0.5em; }
+nav li { display: inline-block; margin-right: 1em; color: #333; }
+#menu { position: absolute; top: 0; right: 0; padding: 0 1em; 
+    height: 64px; 
+    line-height: 64px; color: #333; cursor: pointer;
+}
+main div { margin: 1em; padding: 1em; height: 67vh; 
+    color: #333; font-weight: normal; 
+    background-color: yellow;
+}
+footer { height: 200px; }
+
+@media (max-width: 768px) {
+    nav { display: none; }
+    #menu:hover + nav {
+        display: inherit;
+        text-align: right;
+    }
+    #menu:hover + nav li { 
+        display: block;
+        padding: 0.6em;
+    }
+}
+
+@media (min-width: 769px) {
+    #menu { display: none; }
+    #wrapper { grid-template-columns: 200px 1fr; }
+    header, footer { grid-column: 1 / -1; }
+}
