@@ -8,13 +8,13 @@
         body { margin: 0; }
         main { width: 100vw; display: grid;             
             grid-template-areas: 
-            "nav nav nav"
-            "aside sec-1 sec-1"
-            "aside sec-2 sec-3"
-            "footer footer footer";
-            gap: 12px;
+                "nav     nav     nav"
+                "aside   sec1    sec1"
+                "aside   sec2    sec3"
+                "footer  footer  footer";
             grid-template-columns: 200px 1fr 300px;
             grid-template-rows: 80px 200px auto 200px;
+            gap: 12px;
         }
 
         main > * { padding: 0.8em; color: slateblue; background-color: lavender; }
@@ -22,12 +22,12 @@
             font-family: serif; color: #555; background-color: #fff;
         }
 
-        nav { grid-area: nav; }        
+        nav { grid-area: nav; }
         footer { grid-area: footer; }
         aside { grid-area: aside; }
-        .sec-1 { grid-area: sec-1; }
-        .sec-2 { grid-area: sec-2; }
-        .sec-3 { grid-area: sec-3; }
+        .sec-1 { grid-area: sec1; }
+        .sec-2 { grid-area: sec2; }
+        .sec-3 { grid-area: sec3; }
     </style>
 </head>
 <body>
