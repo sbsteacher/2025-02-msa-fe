@@ -3,26 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>gridlayout.html</title>
+    <title>gridlayout2.html</title>
     <style>
         body { margin: 0; }
-        main { width: 100vw; display: grid; 
-            /* grid-template-columns 가로를 몇 칸으로 구성할지 설정
-            200px 1fr 300px  >> 3칸으로 구성하겠다. 
-                                첫번째 칸은 가로 크기 200px 
-                                두번째 칸은 남는 공간 모두 차지
-                                세번째 칸은 가로 크기 300px
-            */
-            grid-template-columns: 200px 1fr 300px;
-
-            /* grid-template-rows 세로를 몇 칸으로 구성할지 설정
-                80px 200px auto 200px  >>  첫번째 줄은 세로 크기 80px
-                                            두번째 줄은 세로 크기 200px
-                                            세번째 줄은 1fr과 유사
-                                            네번째 줄은 세로 크기 200px
-            */
-            grid-template-rows: 80px 200px auto 200px;
+        main { width: 100vw; display: grid;             
+            grid-template-areas: 
+            "nav nav nav"
+            "aside sec-1 sec-1"
+            "aside sec-2 sec-3"
+            "footer footer footer";
             gap: 12px;
+            grid-template-columns: 200px 1fr 300px;
+            grid-template-rows: 80px 200px auto 200px;
         }
 
         main > * { padding: 0.8em; color: slateblue; background-color: lavender; }
@@ -30,10 +22,12 @@
             font-family: serif; color: #555; background-color: #fff;
         }
 
-        nav { grid-column: 1 / -1; /* column 그리드 번호 1 ~ 마지막번호까지 모든 칸 합치기 */ }
-        footer { grid-column: 1 / -1; }
-        aside { grid-row: 2 / 4; }
-        .sec-1 { grid-column: 2 / -1; }
+        nav { grid-area: nav; }        
+        footer { grid-area: footer; }
+        aside { grid-area: aside; }
+        .sec-1 { grid-area: sec-1; }
+        .sec-2 { grid-area: sec-2; }
+        .sec-3 { grid-area: sec-3; }
     </style>
 </head>
 <body>
