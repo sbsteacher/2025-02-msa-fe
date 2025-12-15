@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>invisible.html</title>
+   
+    <style>
+        div { padding: 24px; background-color: skyblue;
+            cursor: pointer;
+            /* 투명도 - 0:완전 투명, 1: 불투명, 0.5: 반투명, 공간은 차지 */
+            /* opacity: 0;  */
+            
+            /* 보이지 않지만 공간은 차지 */
+            /* visibility: hidden;  */
+            
+            /* 보이지도 공간도 차지하지 않는다. */
+            /* display: none; */
+            height: 0; padding: 0; margin: -1px; overflow: hidden;
+        }
+        p { background-color: aquamarine; }        
+    </style>
+</head>
+<body>
+    <div>이 요소에 적용해 보세요!</div>
+    <p>다음 요소</p>
+</body>
+</html>

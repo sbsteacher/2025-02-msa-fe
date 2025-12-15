@@ -8,13 +8,26 @@
         
         .container { 
             display: flex;
-            flex-direction: flex-start;
+            flex-direction: row;
             justify-content: flex-start;
             align-items: center;
             background-color: #ccc; height: 500px; 
         }
+        /* flex-grow, flex-shrink는 자식에게 적용하는 속성
+        flex-grow는 남는 공간을 차지하는 비율, 만약 한 자식만 flex-grow 1이상의 속성값을 가지고 있다면 
+        혼자서 남는 공간 모두 차지하겠다는 의미. 두개 이상의 자식이 flex-grow 속성값을 가지고 있다면
+        비율만큼 남는 공간을 차지하게 된다.
+        
+        shrink(수축)
+        flex-shrink는 width 혹은 flex-basis와 함께 있을 때 적용이 된다.
+        부모가 작아지면서 자식들도 작아지게 되었을 때 각 자식의 width 혹은 flex-basis 크기보다
+        더 작아져야 되는 상황일 때 더 빠르게 작아지게 하는 비율값이다. 
+        flex-shrink: 0 은 width 혹은 flex-basis로 고정, 절대 작아지지 않는다.
+        flex-shrink: 1 은 (default) 부모에 맞춰 작아진다.
+        flex-shrink: 2 이상은 1인 자식보다 더 빠르게 작아지며 숫자가 높을수록 더 빨리 작아진다.
+        */
         .container > div { background-color: slateblue; 
-                        min-width: 48px; min-height: 48px; 
+                        flex-basis: 100px; min-height: 48px; 
                         padding: 12px;
                         border: 1px solid #ccc;
                         font-size: 30px; color: #fff;
@@ -24,9 +37,9 @@
 </head>
 <body>
     <div class="container">
-        <div>A</div>
-        <div>B</div>
-        <div>C</div>
+        <div style="flex-shrink: 2;">A</div>
+        <div style="flex-shrink: 3;">B</div>
+        <div style="flex-shrink: 0;">C</div>
         <div>D</div>
         <div>E</div>
     </div>
