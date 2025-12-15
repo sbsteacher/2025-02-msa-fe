@@ -1,0 +1,9 @@
+body { margin: 0; }
+#wrapper { display: grid; gap: 12px; }
+#wrapper > * { 
+    background-color: lightblue;
+    padding: 1em;
+    font-size: 1.2em;
+    color: royalblue;
+    font-weight: bold;
+}
