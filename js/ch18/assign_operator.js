@@ -27,3 +27,13 @@ n3--; //감소연산자
 console.log('n3:', n3);
 
 
+let n4 = 10;
+let result4 = n4++; //읽기 > 쓰기
+
+let n5 = 10;
+let result5 = ++n5; //쓰기 > 읽기
+
+console.log('result4:', result4); //10
+console.log('result5:', result5); //11
+console.log('n4:', n4);
+console.log('n5:', n5);
