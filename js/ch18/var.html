@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>var.html</title>
+</head>
+<body>
+    <h1>var.html</h1>
+    <script>
+        /* 변수랑 상수는 값을 담는 공간
+            변수는 값을 계속 변경할 수 있다. (읽기/쓰기 가능)
+            상수는 한번 입력된 값은 변경할 수 없다. (읽기만 가능)
+        */
+
+        // = 대입연산자 라고 부르며, 우측 값을 복사하여 좌측에 저장
+        // let은 변수 선언(변수 공간 할당)할 때 사용, 최초 1회
+        // name은 변수명, 변수명 네이밍을 준 공간을 만들었다.
+        // 선언과 동시에 값을 대입
+        // 최초 대입은 초기화라고 부른다. 
+        let name = '홍길동'; // '', "" 로 감싸면 문자열이 된다.
+
+        console.log(name); //변수에 저장된 값 읽기
+
+        name = '신사임당'; //쓰기 (Write)
+
+        console.log(name); //읽기 (Read)
+
+        // const는 상수 선언(상수 공간 할당)할 때 사용, 최초 1회
+        // 네이밍을 대문자로 작성하고 단어 구분은 언더바(_)로 한다.
+        // 초기화 이후 값 변경이 불가능, 읽기만 가능
+        // 리터럴(Literal) 값 그 자체인 값
+        const PI_VALUE = 3.14; //숫자형(실수)
+        console.log('PI_VALUE:', PI_VALUE);
+
+        //PI_VALUE = 3333.1; //상수값을 변경하려고 하면 에러 발생
+
+        //변수 선언을 여러개를 한번에 하는 것도 가능        
+        let num1 = 10, num2 = 20, str1 = '10', str2 = '20';
+
+        let result1 = num1 + num2;
+        //1) let result1 = 10 + 20; //숫자 더하기 숫자( 사칙연산 더하기 )
+        //2) let result1 = 30;
+        // 대입연산자는 우측에 값이 있어야 된다.
+        // 우측에 식이 있으면 식의 결과값이 저장이 된다.
+        
+        let result2 = str1 + str2;
+        //1) let result2 = '10' + '20'; //문자열 더하기 문자열 ( 문자열 합치기 )
+        //2) let result2 = '1020';
+
+        console.log('result1:', result1);
+        console.log('result2:', result2);
+
+        let result3 = num1 + str2;
+        //1) let result3 = 10 + '20'; // 숫자형 + 문자열 
+        // >> 타입이 다르다. 타입이 다르면 연산할 수 없다. 
+        // >> 양쪽 타입이 같도록 형변환 
+        // >> 자동형변환
+        // 문자열 + (어떤 타입) 이라도 전부(어떤 타입) 문자열로 바뀐다.
+        //2)let result3 = '10' + '20'
+        //3)let result3 = '1020';
+        console.log('result3:', result3);
+
+        let result4 = num1 + num1 + str2; //2020, 1010, 1020, 101020
+        //1) result4 = 10 + 10 + '20';   
+        // >> 더하기 연산이 2개가 있고 우선순위가 같기 때문에 10 + 10 먼저 연산된다.
+        //2) result4 = 20 + '20';
+        //3) result4 = '20' + '20';
+        //4) result4 = '2020';
+        console.log('result4:', result4);
+
+
+        let result5 = num1 * num2 / num1; // 곱하기는 *(별표), 나누기는 / (슬러시)
+
+        console.log(str1 * str2);
+        console.log('11' * '22'); //11 * 22 로 숫자형으로 자동형변환이 되었다.
+        console.log('1a1' * '2b2'); //Not a Number (NaN)
+
+        //Mod, %, 나누었을 때 나머지 값 구하기
+        console.log('10 / 3:', 10 / 3);
+        console.log('10 % 3:', 10 % 3);
+
+        console.log(212321 % 2);
+        console.log(212322 % 2);
+    </script>
+</body>
+</html>
