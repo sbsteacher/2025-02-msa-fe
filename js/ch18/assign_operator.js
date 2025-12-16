@@ -37,3 +37,16 @@ console.log('result4:', result4); //10
 console.log('result5:', result5); //11
 console.log('n4:', n4);
 console.log('n5:', n5);
+
+console.log('-------------------------')
+let n6 = 10;
+n6++; //쓰기
+console.log('n6:', n6); //읽기
+
+let n7 = 10;
+console.log('n7++:', n7++); //10
+console.log('n7:', n7); //11
+
+let n8 = 10;
+console.log('++n8:', ++n8); //11
+console.log('n8:', n8); //11
