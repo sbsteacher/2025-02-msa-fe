@@ -11,3 +11,5 @@ console.log('rVal2:', rVal2);
 let rVal3 = Math.random() * 10;
 console.log('rVal3:', rVal3);
 console.log('parseInt(rVal3):', parseInt(rVal3));
+
+let rVal4 = parseInt(Math.random() * 10);
