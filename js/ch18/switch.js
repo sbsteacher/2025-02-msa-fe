@@ -34,7 +34,6 @@ switch(mon) {
     case 12:        
         console.log('겨울');
         break;
-
     case 3: 
     case 4: 
     case 5:
