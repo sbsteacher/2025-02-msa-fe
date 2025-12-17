@@ -13,3 +13,15 @@ console.log(person1);
 
 console.log(!person1.married);
 console.log(person1.married);
+
+person1['age'] = 30;
+const key = 'name';
+person1[key] = '권수영';
+//person1['name'] = '권수영'; // 이렇게 작성한 것과 같다.
+console.log(person1);
+
+//객체 생성 이후에 속성추가가 가능하다. (동적 할당)
+person1.address = '대구';
+person1['height'] = 174.3;
+console.log(person1);
+
