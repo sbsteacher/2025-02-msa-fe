@@ -35,9 +35,9 @@ if( score >= 90 ) {
 }
 
 if(score >= 60) {
-    if (score == 100 || score % 10 >= 8) { result = result + '+'; }
-    else if (score % 10 >= 3) { result = result + '0'; }
-    else if(score % 10 >= 0)  { result = result + '-';  }
+    if (score == 100 || score % 10 >= 8) { result += '+'; }
+    else if (score % 10 >= 3) { result += '0'; }
+    else { result = result + '-';  }
 }
 
 console.log(result);
