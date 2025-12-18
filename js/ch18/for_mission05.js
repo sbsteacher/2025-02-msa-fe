@@ -7,6 +7,8 @@ for(let i=1; i<=9; i++) {
     console.log(`${dan} x ${i} = ${dan * i}`);
 }
 
+
+
 //4 x 1 = 4
 //4 x 2 = 8
 //4 x 3 = 12
