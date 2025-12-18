@@ -17,6 +17,15 @@ for(let i=0; i<star; i++) {
 for(let i=0; i<star; i++) {
     console.log(str);
 }
+console.log('-------------')
+let str2 = '';
+for(let i=1; i<=star*star; i++) {
+    str2 += '*';
+    if(i % star === 0) {
+        str2 += '\n';
+    }
+}
+console.log(str2);
 //예) 5
 //*****
 //*****
