@@ -1,5 +1,5 @@
 /* object.js
-자바스크립트에서 객체를 만드는 방법
+자바스크립트에서 객체를 만드는 방법 {} 중괄호로 만든다.
 
 객체는 (속성), (메소드(Method))로 이루어질 수 있다.
 키: 값
@@ -32,12 +32,13 @@ run();
 const str = 'aaa';
 bbb.run();
 
+
 const person2 = bbb; //shallow copy (얕은 복사, 주소값 복사)
 console.log('person1.name:', bbb.name);
 console.log('person2.name:', person2.name);
 bbb.name = '홍길동';
 person2.age = 30;
-console.log('person1.name:', bbb.name);
+console.log('person1.name:', bbb['name']);
 console.log('person2.name:', person2.name);
 console.log('person1.age:', bbb.age);
 console.log('person2.age:', person2.age);

@@ -1,0 +1,18 @@
+body { margin: 0; background: #000; overflow-x: hidden; }
+
+.section-wrapper {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.apple-image {
+    width: 60vw; /* 초기 크기 */
+    height: auto;
+    border-radius: 20px;
+}
+
+.spacer { height: 100vh; background: #222; } /* 스크롤 확인용 여백 */

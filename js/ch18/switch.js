@@ -53,3 +53,5 @@ switch(mon) {
         console.log('다시 입력해 주세요.');
         break;
 }
+
+console.log('-- 끝 --');

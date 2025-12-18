@@ -25,6 +25,7 @@ console.log('arr3.length:', arr3.length);
 
 console.log('arr.length:', arr.length);
 console.log('arr2.length:', arr2.length);
+console.log('arr2[0]:', arr2[0]);
 arr[1] = 11;
 console.log(arr[0], arr[1], '...', arr[4]);
 console.log('arr[5]:', arr[5]);
