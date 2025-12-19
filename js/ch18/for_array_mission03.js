@@ -3,8 +3,8 @@
     출력해 주시오.
 */
 const arr = [ 3, 8, 11, 86, 43, 22, 27 ]; 
-const result = [0, 0];
-const resultStr = ['짝수', '홀수'];
+const result = [ 0, 0 ];
+const resultStr = [ '짝수', '홀수' ];
 
 for(let i=0; i<arr.length; i++) {
     const item = arr[i];
