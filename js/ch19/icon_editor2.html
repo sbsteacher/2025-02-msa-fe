@@ -7,8 +7,7 @@
 </head>
 <body>
     <h1>ICON EDITOR2</h1>
-    <div id="editor">             
-    </div>
+    <div id="editor"></div>
     <script>        
         function makeElement(name, attributes) {
             const node = document.createElement(name);                        
@@ -23,6 +22,25 @@
         function createIconEditor(target, nx, ny) {
             const $inputColor = makeElement( 'input', { type: 'color'} );
             target.append($inputColor);
+            
+            const $inputColorClear = makeElement( 'input', { type: 'button', value: 'Clear' } );
+            target.append($inputColorClear);
+
+            const $table = makeElement('table');
+            target.append($table);
+            $table.style.borderCollapse = 'collapse';
+            $table.style.marginTop = '5px';
+
+            for(let y=0; y<ny; y++) { //줄 담당
+                const $tr = makeElement('tr');
+                $table.append($tr);
+                for(let x=0; x<nx; x++) { //칸 담당
+                    const $td = makeElement('td');
+                    $tr.append($td);
+                    $td.style.width = $td.style.height = '15px';
+                    $td.style.border = '1px solid gray';
+                }
+            }
         }
 
         const $editor = document.querySelector('#editor');
