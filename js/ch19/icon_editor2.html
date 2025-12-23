@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>icon_editor2.html</title>
+</head>
+<body>
+    <h1>ICON EDITOR2</h1>
+    <div id="editor">             
+    </div>
+    <script>        
+        function makeElement(name, attributes) {
+            const node = document.createElement(name);                        
+            if( attributes ) { 
+                for( const item in attributes ) {
+                    node.setAttribute(item, attributes[item]);
+                }
+            }
+            return node;
+        }
+
+        function createIconEditor(target, nx, ny) {
+            const $inputColor = makeElement( 'input', { type: 'color'} );
+            target.append($inputColor);
+        }
+
+        const $editor = document.querySelector('#editor');
+        createIconEditor($editor, 20, 20);
+    </script>
+</body>
+</html>
