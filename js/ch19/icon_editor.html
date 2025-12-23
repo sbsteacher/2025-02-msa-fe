@@ -28,7 +28,15 @@
             return node;
         }
 
-        const $editor = ??;
+        const $editor = document.querySelector('#editor');
+        const attributes = {
+            'type': 'number',
+            'value': '110'
+        };
+        const temp = makeElement('input', attributes);
+        $editor.append(temp);
     </script>
+
+    <input type="number" value="110">
 </body>
 </html>
