@@ -15,9 +15,28 @@
         <div id="result"></div>
     </div>
     <script>
-        const $inputN1 = null; 
-        const $inputN2 = null;
-        const $btnAdd = null;
+        const $inputN1 = document.querySelector('#n1'); 
+        const $inputN2 = document.querySelector('#n2');
+        const $btnAdd = document.querySelector('#btn_add');
+        const $result = document.querySelector('#result');
+        console.log($inputN1, $inputN2, $btnAdd);
+
+        //이벤트(~할 때)
+        //이벤트 바인딩(묶는다), 이벤트 + 함수 묶는다.
+        //특정 이벤트가 발생되면 함수가 실행되게 세팅한다.
+        //$btnAdd 버튼 객체에 click 이벤트 바인딩
+        //addEventListener 메소드에는 아규먼트 2개를 보내야 한다.
+        //첫번째 값: 이벤트 이름(문자열)
+        //두번째 값: 함수 주소값
+        $btnAdd.addEventListener( 'click', function() {
+            const n1 = $inputN1.value; //value속성에는 문자열만 저장된다.
+            const n2 = $inputN2.value;
+
+            console.log(`n1: ${n1}, n2: ${n2}`);
+
+            const addValue = Number(n1) + Number(n2);
+            $result.innerText = addValue;
+        } );
     </script>
 </body>
 </html>
