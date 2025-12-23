@@ -8,6 +8,14 @@
 </head>
 <body>
     <h1>장보기 목록</h1>
+    <section>
+        <h2>고기</h2>
+        <ul>
+            <li class="soldout">소고기</li>
+            <li>돼지고기</li>
+            <li class="soldout">닭고기</li>
+        </ul>
+    </section>
 
     <section class="plant">
         <h2>채소</h2>
@@ -27,17 +35,17 @@
         </ul>
     </section>
 
-    <section>
-        <h2>고기</h2>
-        <ul>
-            <li class="soldout">소고기</li>
-            <li>돼지고기</li>
-            <li class="soldout">닭고기</li>
-        </ul>
-    </section>
+   
 
     <script>
-        
+        const $plantUlSoldout = document.querySelector('.plant .soldout');
+        console.log('$plantUlSoldout.innerText:', $plantUlSoldout.innerText);
+
+        const $strawberry = document.querySelector('#sweets > ul > li:nth-child(2)');
+        console.log('$strawberry.innerText:', $strawberry.innerText);
+
+        const $section = document.querySelector('section');
+        console.log('$section.children:', $section.children);
     </script>
 </body>
 </html>
