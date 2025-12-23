@@ -7,7 +7,10 @@
 </head>
 <body>
     <h1>ICON EDITOR</h1>
-    <div id="editor"></div>
+    <div id="editor">
+        <div>ㅋㅋㅋ</div>
+        <div>ㅎㅎㅎ</div>        
+    </div>
     <script>
         //엘리먼트 생성 함수
         //첫번째 파라미터: 태그명(문자열)
@@ -34,9 +37,9 @@
             'value': '110'
         };
         const temp = makeElement('input', attributes);
-        $editor.append(temp);
+        
+        //$editor.prepend(temp); //내 자식 중 가장 앞에 들어오거라
+        $editor.append(temp); //내 자식 중 가장 뒤에 들어오거라
     </script>
-
-    <input type="number" value="110">
 </body>
 </html>
