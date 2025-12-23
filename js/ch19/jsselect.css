@@ -1,0 +1,5 @@
+body { padding: 16px 32px; }
+
+section { margin: 12px 0; padding: 8px 24px; background-color: bisque; border-radius: 12px; }
+section.plant { background-color: lightgreen; }
+.soldout { opacity: 0.3; }

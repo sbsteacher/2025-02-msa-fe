@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>element.html</title>
+    <style>
+        .div-b { background-color: aqua; }
+    </style>
+</head>
+<body>
+    <div>A</div>
+    <div class="div-b">B</div>
+    <script>
+        //자바스크립트 문법 작성
+        //아규먼트로 css 선택자 작성(주소값을 얻어오고 싶은 엘리먼트 선택!!)
+        //querySelector > 엘리먼트 주소값 하나
+        //querySelectorAll > 배열 주소값 하나
+        const div01 = document.querySelector('div'); //<div>A</div> 객체 주소값 리턴
+        div01.innerText = '가';
+        //div01.textContent = 'zzzz'
+        div01.style.backgroundColor = 'red';
+        //div01.remove();
+    </script>
+</body>
+</html>
