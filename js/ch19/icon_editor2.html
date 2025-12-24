@@ -25,13 +25,12 @@
             
             const $inputColorClear = makeElement( 'input', { type: 'button', value: 'Clear' } );
             target.append($inputColorClear);
-            $inputColorClear.addEventListener('click', () => {
-                console.log('Clear 버튼 클릭!');
+            $inputColorClear.addEventListener('click', () => {                
                 const tdList = document.querySelectorAll('td');
                 for(const item of tdList) {
                     //item은 td의 엘리먼트 주소값 담긴다.
                     item.style.backgroundColor = '';
-                }                
+                }
             });
 
             const $table = makeElement('table');
