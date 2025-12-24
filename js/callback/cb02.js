@@ -12,5 +12,5 @@ arr.forEach(proc);
 // }
 console.log('------------');
 arr.forEach((item, idx) => {
-    console.log(`arr[${idx}]: ${item}`);
+    console.log(`arr2[${idx}]: ${item}`);
 });

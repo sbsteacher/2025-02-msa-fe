@@ -6,11 +6,17 @@ const myArr = {
     '3': 9,
     '4': 34,
     '5': 65,
-    'length': 6,
-    'forEach': function() {        
+    '6': 77,
+    'length': 7,
+    'forEach': function(aaa) {  
+        for(let i=0; i<this.length; i++) {
+            aaa(this[i], i);
+        }
     }
 };
+const ddd = (item, idx) => {
+    console.log(`arr2[${idx}]: ${item}`);
+};
+myArr.forEach(ddd);
 
-myArr.forEach((item, idx) => {
-    console.log(`arr[${idx}]: ${item}`);
-});
+
