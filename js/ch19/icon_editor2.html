@@ -39,8 +39,16 @@
                     $tr.append($td);
                     $td.style.width = $td.style.height = '15px';
                     $td.style.border = '1px solid gray';
+
+                    $td.addEventListener('click', () => {
+                        $td.style.backgroundColor = $inputColor.value;
+                    });
                 }
+                //B
+
             }
+            //C
+
         }
 
         const $editor = document.querySelector('#editor');
