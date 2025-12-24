@@ -8,11 +8,11 @@ const arr2 = arr.filter( item => !(item % 2) );
 console.log(arr2);
 const arr3 = arr2.map( item => item / 2 );
 console.log(arr3);
-arr3.forEach(item => console.log('item:', item));
+arr3.forEach( item => console.log('item:', item) );
 console.log('-----------------------');
 //체이닝 기법
 arr.filter( item => !(item % 2) )
     .map( item => item / 2 )
-    .forEach(item => console.log('item:', item))                
+    .forEach( item => console.log('item:', item) )
     ;
 // [ 44, 38, 17 ]
