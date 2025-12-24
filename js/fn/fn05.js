@@ -14,6 +14,8 @@ const sum2 = function(n1, n2) {
     console.log('sum2:', n1 + n2);
 }
 
+sum2();
+
 //정의 방법이 기존과 달라진다. 
 const arrowSum = (n1, n2) => { 
     console.log('arrowSum:', n1 + n2);

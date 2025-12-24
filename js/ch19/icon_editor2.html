@@ -25,6 +25,14 @@
             
             const $inputColorClear = makeElement( 'input', { type: 'button', value: 'Clear' } );
             target.append($inputColorClear);
+            $inputColorClear.addEventListener('click', () => {
+                console.log('Clear 버튼 클릭!');
+                const tdList = document.querySelectorAll('td');
+                for(const item of tdList) {
+                    //item은 td의 엘리먼트 주소값 담긴다.
+                    item.style.backgroundColor = '';
+                }                
+            });
 
             const $table = makeElement('table');
             target.append($table);
@@ -40,15 +48,15 @@
                     $td.style.width = $td.style.height = '15px';
                     $td.style.border = '1px solid gray';
 
-                    $td.addEventListener('click', () => {
-                        $td.style.backgroundColor = $inputColor.value;
+                    $td.addEventListener('click', e => {
+                        const bColor = e.target.style.backgroundColor;
+                        //e.target은 td의 엘리먼트의 주소값 담겨져 있음
+                        e.target.style.backgroundColor = bColor 
+                                                            ? '' 
+                                                            : $inputColor.value;                        
                     });
                 }
-                //B
-
             }
-            //C
-
         }
 
         const $editor = document.querySelector('#editor');
