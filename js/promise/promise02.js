@@ -35,4 +35,10 @@ const increaseAndPrintPromise = (n) => {
 increaseAndPrintPromise(10)
 .then(item => increaseAndPrintPromise(item))
 .then(item => increaseAndPrintPromise(item))
-.then(item => console.log('끝') );
+.then(item => increaseAndPrintPromise(item))
+.then(item => increaseAndPrintPromise(item))
+.then(item => increaseAndPrintPromise(item))
+.then(item => increaseAndPrintPromise(item))
+.then(item => increaseAndPrintPromise(item))
+.then(item => increaseAndPrintPromise(item))
+.then(item => console.log('끝', item) );
