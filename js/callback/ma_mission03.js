@@ -21,6 +21,14 @@ const myArr = {
             }
         }
         return temp;
+    },
+    map: function( fn ) {
+        const temp = []; 
+        for(let i=0; i<this.length; i++) {
+            //temp.push( fn(this[i], i) );
+            temp[i] = fn(this[i], i);
+        }
+        return temp;
     }
 };
 const arr2 = myArr.map( item => {
