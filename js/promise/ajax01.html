@@ -9,8 +9,40 @@
     <div id="container"></div>
     <script>
         fetch('https://picsum.photos/v2/list')
-        .then(res => console.log(res))
-        .catch(err => console.log(err))
+        .then(res => res.json())
+        .then( json => procItems(json) )
+        .catch( err => console.log(err) );
+
+        const procItems = list => {
+            
+            const $container = document.querySelector('#container');
+
+            list.forEach( (item, i) => {
+                const elem = makeItem(item);
+                //컨테이너에 elem을 append 해주세요.
+                $container.append(elem);
+            } );
+        }
+
+        const makeItem = data => {
+            const div = document.createElement('div');
+            
+            return div;
+        }
+
+        const obj = {
+            name: '홍길동',
+            age: 22,
+            height: 168.4
+        }
+
+        console.log('obj:', obj);
+        
+        const jsonObj = JSON.stringify(obj);
+        console.log('jsonObj:', jsonObj);
+        const obj2 = JSON.parse(jsonObj);
+        console.log('obj2:', obj2);
+
     </script>
 </body>
 </html>
