@@ -14,9 +14,9 @@ const myArr = {
         }
     }
 };
-const ddd = (item, idx) => {
+
+myArr.forEach((item, idx) => {
     console.log(`arr2[${idx}]: ${item}`);
-};
-myArr.forEach(ddd);
+});
 
 

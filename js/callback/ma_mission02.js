@@ -13,10 +13,13 @@ const myArr = {
             aaa(this[i], i);
         }
     },
-    'filter': function() {
-        const temp = [];
-        //작업!!!
-        
+    'filter': function( fn ) {
+        const temp = [];        
+        for(let i=0; i<this.length; i++) {
+            if( fn(this[i], i) ) {
+                temp.push( this[i] );
+            }
+        }
         return temp;
     }
 };
