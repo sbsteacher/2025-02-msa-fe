@@ -25,8 +25,14 @@
         }
 
         const makeItem = data => {
+            console.log('data:', data);
+            //src 속성에 download_url속성에 담긴 값을 넣고 싶어요.
             const div = document.createElement('div');
-            
+            div.innerHTML = `
+                <!-- 주석임 -->
+                <img src="${data.download_url}" alt="">
+                <div></div>
+            `;
             return div;
         }
 
