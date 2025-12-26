@@ -28,6 +28,7 @@ setTimeout( () => {
 
 console.log('------------------');
 //콜백 지옥!
+//가독성이 떨어진다. 탭이 많이 들어가기 때문
 setTimeout( () => {
     console.log('-첫번째 setTimeout');
     
@@ -42,5 +43,7 @@ setTimeout( () => {
 
 }, 1000 );
 
+//콜백지옥에 빠지지 않기 위해 promise를 배운다.
+//promise는 코드를 플랫(Flat)하게 작성할 수 있도록 도와준다.
 
 
