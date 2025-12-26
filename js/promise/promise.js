@@ -19,12 +19,12 @@ Promise: 생성자 함수
     reject는 실패했을 때 호출
 }
 */
-let val = 10;
+let val = 9;
 const p1 = new Promise( (resolve, reject) => {
     if(val % 2) { //홀수
-        resolve('홀수');
+        resolve('홀수'); // then메소드에 전달된 콜백함수가 호출, 아규먼트값이 넘어간다.
     } else { //짝수
-        reject('짝수');
+        reject('짝수'); // catch메소드에 전달된 콜백함수가 호출, 아규먼트값이 넘어간다.
     }
 }); //p1에는 promise객체 주소값 저장
 
