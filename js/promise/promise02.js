@@ -14,6 +14,20 @@ const increaseAndPrint = (n, cb) => {
     }, 1000 );
 }
 
-increaseAndPrint(0, n => {
-    increaseAndPrint(n);
+increaseAndPrint(0, n1 => {
+    increaseAndPrint(n1, n2 => {
+        increaseAndPrint(n2);
+    });
 });
+
+console.log('-----------------------');
+
+const increaseAndPrintPromise = (n) => {
+    return new Promise( resolve => {
+        setTimeout( () => {
+            const increased = n + 1;
+            console.log('increased:', increased);
+            resolve(increased);
+        }, 1000 )
+    });
+}
