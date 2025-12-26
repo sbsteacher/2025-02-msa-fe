@@ -1,4 +1,4 @@
-/* ma_mission02.js  */
+/* ma_mission03.js  */
 const myArr = {
     0: 3,
     1: 88,
@@ -23,9 +23,8 @@ const myArr = {
         return temp;
     }
 };
+const arr2 = myArr.map( item => {
+    return item + 2;
+} );
 
-const arr2 = myArr.filter( item => item <= 70 );
-console.log(arr2); // [ 3, 9, 34, 65 ]
-
-
-
+console.log(arr2); //[5, 90, 78, 11, 36, 67, 79 ]
