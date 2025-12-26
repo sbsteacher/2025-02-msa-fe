@@ -7,14 +7,22 @@
 </head>
 <body>
     <div id="container"></div>
+    <div id="page-container"></div>
     <script>
-        fetch('https://picsum.photos/v2/list')
-        .then(res => res.json())
-        .then( json => procItems(json) )
-        .catch( err => console.log(err) );
+
+        const getData = page => {
+            fetch(`https://picsum.photos/v2/list?limit=50&page=${page}`)
+            .then( res => res.json() )
+            .then( json => procItems(json) )
+            .catch( err => {
+                alert('에러 발생!');
+                console.log(err);
+            } );
+        }
+        getData(1);
+        
 
         const procItems = list => {
-            
             const $container = document.querySelector('#container');
 
             list.forEach( (item, i) => {
@@ -25,13 +33,17 @@
         }
 
         const makeItem = data => {
-            console.log('data:', data);
-            //src 속성에 download_url속성에 담긴 값을 넣고 싶어요.
+            console.log('data:', data);            
+            // 기존이미지 크기보다 1/10 작은 이미지가 뜰 수 있도록 해주세요.
+            const width = parseInt(data.width * 0.1);
+            const height = parseInt(data.height * 0.1);
+            const src = `https://picsum.photos/id/${data.id}/${width}/${height}`;
             const div = document.createElement('div');
+            div.className = 'aaa bbb';
             div.innerHTML = `
                 <!-- 주석임 -->
-                <img src="${data.download_url}" alt="">
-                <div></div>
+                <img src="${src}" alt="${data.author} 작가가 찍은 사진">
+                <div>${data.author}</div>
             `;
             return div;
         }
