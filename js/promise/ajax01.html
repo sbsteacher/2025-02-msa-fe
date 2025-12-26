@@ -23,6 +23,9 @@
                 const $span = document.createElement('span');
                 $pageContainer.append($span);
                 $span.innerText = i;
+                $span.addEventListener('click', () => {
+                    getData(i);
+                });
             }
         }
         makePageContainer();
@@ -39,9 +42,11 @@
         getData(1);
         
 
-        const procItems = list => {
-            const $container = document.querySelector('#container');
+        
+        const $container = document.querySelector('#container');
 
+        const procItems = list => {
+            $container.innerText = null;
             list.forEach( (item, i) => {
                 const elem = makeItem(item);
                 //컨테이너에 elem을 append 해주세요.
