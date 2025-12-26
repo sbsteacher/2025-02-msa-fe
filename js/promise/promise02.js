@@ -14,11 +14,11 @@ const increaseAndPrint = (n, cb) => {
     }, 1000 );
 }
 
-increaseAndPrint(0, n1 => {
-    increaseAndPrint(n1, n2 => {
-        increaseAndPrint(n2);
-    });
-});
+// increaseAndPrint(0, n1 => {
+//     increaseAndPrint(n1, n2 => {
+//         increaseAndPrint(n2);
+//     });
+// });
 
 console.log('-----------------------');
 
@@ -31,3 +31,8 @@ const increaseAndPrintPromise = (n) => {
         }, 1000 )
     });
 }
+
+increaseAndPrintPromise(10)
+.then(item => increaseAndPrintPromise(item))
+.then(item => increaseAndPrintPromise(item))
+.then(item => console.log('끝') );
