@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>localstorage.html</title>
+</head>
+<body>
+    <script>
+        const arr = [ 10, 20, 30 ];
+
+        //로컬스토리지에 배열을 저장하고 싶다.
+        console.log('arr:', arr);
+        console.log('typeof:', typeof arr);
+
+        localStorage.setItem('arr', arr);
+
+        const result = localStorage.getItem('arr');
+        console.log('result:', result);
+        console.log('typeof:', typeof result);
+    </script>
+</body>
+</html>

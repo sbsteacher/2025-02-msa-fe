@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>localstorage.html</title>
+</head>
+<body>
+    <script>
+        /* 로컬스토리지, 브라우저에 데이터를 저장할 수 있는 기능. 
+        브라우저를 껐다켜도 데이터가 남아있다.
+
+        데이터 저장 방법, 데이터 읽는 방법
+        */
+
+        const data = '박효경';
+        window.localStorage.setItem('name', data); //로컬스토리지에 데이터 저장 방법
+
+        const result = localStorage.getItem('name');
+        console.log('result:', result);
+    </script>
+</body>
+</html>

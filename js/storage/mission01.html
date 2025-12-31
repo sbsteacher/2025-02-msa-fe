@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mission01.html</title>
+</head>
+<body>
+    <div id="name"></div>
+
+    <!-- 로컬스토리지에 name키에 저장되어 있는 데이터를 가져오셔서
+    div 안에 텍스트노드를 넣어주세요. -->
+    <script>
+        const result = localStorage.getItem('name');
+        const $name = document.querySelector('#name');
+        $name.innerText = result;
+    </script>
+</body>
+</html>
